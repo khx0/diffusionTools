@@ -25,6 +25,11 @@ BASEDIR = os.path.dirname(os.path.abspath(__file__))
 RAWDIR = os.path.join(BASEDIR, 'raw')
 OUTDIR = os.path.join(BASEDIR, 'out')
 
+"""
+    Viscosity table for water:
+    first column  -> temperature in degree Celsius
+    second column -> viscosity in m Pa * s
+"""
 viscTable = np.array([[16.0, 1.1081],
                       [17.0, 1.0798],
                       [18.0, 1.0526],
@@ -53,14 +58,14 @@ viscTable = np.array([[16.0, 1.1081],
 
 def D_StokesEinstein(temp, eta, radius):
     
-    '''
+    """
     arguments:
         temp = temperature in Kelvin [K]
         eta = viscosity in milli Pascal seconds [m Pa * s]
         radius in nanometer [nm]
     return:
         diffusion coefficient D in units of [(um)^2  / s]
-    '''
+    """
     
     kBValue = 1.38064852
     # 2014 CODATA recommendation from http://physics.nist.gov
@@ -71,5 +76,6 @@ if __name__ == '__main__':
 
     pass
     
+
     
 
