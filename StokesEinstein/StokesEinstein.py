@@ -69,7 +69,10 @@ def D_StokesEinstein(temp, eta, radius):
     
     kBValue = 1.38064852
     # 2014 CODATA recommendation from http://physics.nist.gov
-
+    # kB = 1.38064852 x 10^{-23} Joule / Kelvin
+    
+    # Stokes Einstein relation
+    # D = (k_B T) / (6 \pi \eta R)
     return kBValue * temp * 10.0 / (6.0 * np.pi * eta * radius)
     
 if __name__ == '__main__':

@@ -60,6 +60,7 @@ class StokesEinsteinTest(unittest.TestCase):
         
         radius1 = 60.0          # in nm
         radius2 = 75.0          # in nm
+        # BNID: 101849 / 105769
         
         Dref1 = 3.57294508166   # in (um)^2 / s
         Dref2 = 2.85835606533   # in (um)^2 / s
